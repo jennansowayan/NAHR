@@ -13,6 +13,6 @@ class Course(models.Model):
     name = models.CharField(max_length = 50)
     date = models.DateTimeField()
     provider = models.CharField(max_length = 50)
-    p_link = models.CharField()
+    p_link = models.CharField(max_length = 100)
     
 
