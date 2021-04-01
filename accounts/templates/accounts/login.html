@@ -1,130 +1,131 @@
-{% extends 'accounts/main.html' %}
+{% load static %}
 
 
-{% block content %}
 
 <!DOCTYPE html>
 <html>
     
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>LOGIN</title>
+      <link rel="shortcut icon" href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}">
+      <link rel="stylesheet" href="{% static 'webpages/assets/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'webpages/assets/css/bootstrap.css' %}">
+      <!--link rel="stylesheet" href="css/style.css"-->
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
 	<style>
 		body,
 		html {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-			background: #7abecc !important;
+			font-family: 'Open Sans', sans-serif;
+            color: #18314f;
+            padding-top: 200px;
+            background-color: 1,1,1,0;
 		}
-		.user_card {
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #74cfbf;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
-
+		h1 {
+           font-size: 60px
 		}
 
-		.form_container {
-			margin-top: 20px;
-		}
 
-		#form-title{
-			color: #fff;
-			
-		}
+  .background-colour-light{
+background-color: rgb(255, 255, 255);
+  }
+.border-colour{background-color: lawngreen;}
+.btn.custom-btn{
+  background-color: rgb(255, 255, 255);
+	border-color: #f1c0c0;
+ 
+}
+.border{
+  height: 400px;
+  width:400px;
+}
+.fixed-background {
+  position: center;
+  width: 100%;
+  z-index: 1000!important;
+}
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -999 !important;
+}
+.fixed {
 
-		.login_btn {
-			width: 100%;
-			background: #33ccff !important;
-			color: white !important;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #f7ba5b !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
+  z-index: -999!important;
+  display:block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size:cover;
+  background-position:center center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  background-repeat: repeat;
+}
+.fixed {
 
-		#messages{
-			background-color: grey;
-			color: #fff;
-			padding: 10px;
-			margin-top: 10px;
-		}
+position: fixed;}
+  .fixed-background{padding: 10rem 0;}
+
+
 	</style>
 
 </head>
 <body>
-	<div class="container h-100">
-		<div class="d-flex justify-content-center h-100">
-			<div class="user_card">
-				<div class="d-flex justify-content-center">
-
-
-					<h3 id="form-title">LOGIN</h3>
-				</div>
-				<div class="d-flex justify-content-center form_container">
-					<form method="POST" action="">
-					    {% csrf_token %}
-						<div class="input-group mb-3">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-user"></i></span>
-							</div>
-							<input type="text" name="username" placeholder="Username..." class="form-control">
-						</div>
-						<div class="input-group mb-2">
-							<div class="input-group-append">
-								<span class="input-group-text"><i class="fas fa-key"></i></span>
-							</div>
-								<input type="password" name="password" placeholder="Password..." class="form-control" >
-						</div>
-
-							<div class="d-flex justify-content-center mt-3 login_container">
-				 				<input class="btn login_btn" type="submit" value="Login">
-				   			</div>
-					</form>
-
-				</div>
-		        {% for messages in messages %}
-		        <p id="messages">{{messages}}</p>
-		        {% endfor %}
-				<div class="mt-4">
-					<div class="d-flex justify-content-center links">
-						Don't have an account? <a href="{% url 'register' %}" class="ml-2">Sign Up</a>
-					</div>
-			
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <div class="user_card ">
+            <div class="d-flex justify-content-center">
+              <h3 id="form-title">LOGIN</h3>
+            </div>
+            <div class="d-flex justify-content-center form_container ">
+              <form method="POST" action="">
+              	 {% csrf_token %}
+               <div class="input-group mb-3">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                  </div>
+                  <input type="text" name="username" placeholder="Username..." class="form-control">
+                </div>
+                <div class="input-group mb-2">
+                  <div class="input-group-append">
+                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                  </div>
+                    <input type="password" name="password" placeholder="Password..." class="form-control" >
+                </div>
+                  <div class="d-flex justify-content-center mt-3 login_container ">
+                     <input class="btn custom-btn" type="submit" value="Login">
+                     </div>     
+              </form>
+    
+            </div>
+                <p id="messages"></p>
+              
+            <div class="mt-4">
+              <div class="d-flex justify-content-center links">
+                Don't have an account? <a href="register.html" class="ml-2">Sign Up</a>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fixed-background">
+        <div class="fixed-wrap">
+          <div class="fixed"><img src="{% static 'webpages/assets/img/nahrstuff/nahrstuff.png' %}"></div>
+        </div>
+      </div>
+    </body>
 </html>
 
-{% endblock %}
