@@ -7,3 +7,7 @@ class Course(models.Model):
 	description= models.TextField(null=True,blank=True)
 	fees= models.CharField(max_length=30)
 	link = models.URLField(max_length=200)
+
+
+	def getCat():
+		retu
