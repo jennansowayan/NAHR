@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #18314f;
+  color: #212529;
 }
 
 a {
@@ -91,7 +91,7 @@ position: fixed;}
 }
 
 .back-to-top:hover {
-  background: #ee7843;
+  background: #6d6dc7;
   color: #fff;
 }
 
@@ -172,7 +172,7 @@ position: fixed;}
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 15px;
-  color: #4e4039;
+  color: #f1c0c0;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -642,6 +642,7 @@ section {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0;
+  text-align:  left;
 }
 
 /*--------------------------------------------------------------

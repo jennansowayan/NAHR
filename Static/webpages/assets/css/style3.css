@@ -3,10 +3,10 @@
 body {
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
+  color: #2e1f77;
 }
 h2{font-family: 'Open Sans', sans-serif;
-  color: #ffffff}
+  color: #1e1f77}
   h1{font-family: 'Open Sans', sans-serif;
     color: #424242}
 .fixed-background {
@@ -30,9 +30,9 @@ h2{font-family: 'Open Sans', sans-serif;
 
 }
 
-.bg-color{background-color: #18314F;}
-.bg-color-form{background-color:  rgba(24, 49, 79, 0.9);}
-.bg-colour-course{background-color: rgb(235, 239, 245);}
+.bg-color{background-color: #ef7f4d;}
+.bg-color-form{background-color:  rgba(239,127,77);}
+.bg-colour-course{background-color: rgb(30, 75, 141);}
 .btn.custom-btn{
   background-color: rgb(255, 255, 255);
 	border-color: #f1c0c0;
@@ -44,7 +44,7 @@ h2{font-family: 'Open Sans', sans-serif;
   margin-right: 0px !important;
 }
 .fixed-background {
-  position: center;
+  position: left;
   width: 100%;
   z-index: 1000!important;
 }
