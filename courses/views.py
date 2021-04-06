@@ -1,8 +1,6 @@
 from django.shortcuts import render
-from django.shortcuts import render_to_response
-from .models import{
-    Course
-}
+
+
 # Create your views here.
 
 # TO DO: 
@@ -14,22 +12,28 @@ from .models import{
 
 
 # courses view 
+def tech(request):
+ return render(request, "tech_courses.html", {} )
+
+def science(request):
+ return render(request, "science_courses.html", {} )
+
+def business(request):
+ return render(request, "business_courses.html", {} )
+
+def art(request):
+ return render(request, "art_courses.html", {} )
 # + analize response => get related subcats from the rules
 # + apply recommendations    
 
 def quiz(request):
   if request.method == 'POST':  #submits the quiz
-		form = quizForm(request.POST) #?
-		if form.is_valid():
-			intrest = form.save()
+       form = quizForm(request.POST) #?
+       if form.is_valid():
+            intrest = form.save()
 			# if intrest.objects.all().count() % 10 == 0: 
 			# 	generate_new_rules()
 				
 			# return redirect(recommned)
 
-	else:
-		form = quizForm()
-	return render_to_response('courses_page.html', locals(), context_instance=RequestContext(request)) #pass the response?
 
-def recommned(request):
-	
