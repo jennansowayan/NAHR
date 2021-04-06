@@ -52,12 +52,13 @@ def loginPage(request):
 
 def logoutUser(request):
     logout(request)
-    return redirect('login')
+    return redirect('home')
 
 def home(request):
   return render(request, 'accounts/dashboard.html', {})
 
 def coursesPage(request):
   return render(request, 'accounts/courses.html', {})
-
- 
+@login_required
+def profile(request):
+  return render(request, 'accounts/profile.html',{})

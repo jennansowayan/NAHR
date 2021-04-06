@@ -36,6 +36,7 @@
 
   <!-- Template Main CSS File -->
   <link href="{% static 'webpages/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/css/style1.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Ninestars - v4.1.0
@@ -63,12 +64,20 @@
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="#courses">Courses</a></li>
           
-          <li><a class="nav-link scrollto" href="team">Team</a></li>
-          
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="login/">LOGIN</a></li>
+
+          {% if user.is_authenticated %}
           
-  <span><a href="{% url 'home' %}"> Logout</a></span>
+          
+          <span><a href=logout/> Logout</a></span>
+          <span><a href=profile/> Profile &nbsp &nbsp</a></span>
+          <br><br>
+          <span> Hi, {{request.user}} </span>
+          {% else %}
+
+          <li><a class="getstarted scrollto" href="login/">LOGIN</a></li>
+          {% endif %}
+         
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -82,8 +91,8 @@
     <div class="container">
       <div class="row gy-4">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Bettser digital experience with Nahr </h1>
-          <h2>Elavte your life with trusted online courses</h2>
+          <h1>Better digital experience with NAHR </h1>
+          <h2>Elavte your skillset with our trusted online courses</h2>
           <div>
             <a href="login" class="btn-get-started scrollto">Get Started</a>
           </div>
@@ -134,42 +143,56 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Courses</h2>
-          <p>Check out the great courses we offer</p>
+          <p>Courses</p>
         </div>
 
         <div class="row">
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4 class="title"><pre><a href="">       Technology       </pre></a></h4>
-              <p class="description"><i class="bx bx-chevron-right"></i><a href="#">Programming</a><br>
-              <i class="bx bx-chevron-right"></i><a href="#">UX</a><br>
-              <i class="bx bx-chevron-right"></i><a href="#">Security</a></p>
+              <h4 class="title"><pre><a href="tech">       Technology       </pre></a></h4>
+              <p class="description">
+              <i class="bx bx-chevron-right"></i><a href="#">Programming</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Web development</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Cybersecurity</a>
+            </p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4 class="title"><a href=""><pre>        Sciences        </pre></a></h4>
-              <p class="description">Biology<br>Physics<br>Chemistry<br>Math<br></p>
+              <h4 class="title"><a href="science"><pre>        Sciences        </pre></a></h4>
+              <p class="description">
+              <i class="bx bx-chevron-right"></i><a href="#">Biology</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Physics</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Chemistry</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Math</a>
+            </p>            
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4 class="title"><a href="">Business Managment</a></h4>
-              <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+              <h4 class="title"><a href="business"><pre>        Business        </pre></a></h4>
+              <p class="description">
+              <i class="bx bx-chevron-right"></i><a href="#">Project Management</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Marketing</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Accounting</a><br>
+              </p>
             </div>
           </div>
 
           <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4 class="title"><a href="">Finance & Accounting</a></h4>
-              <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+              <h4 class="title"><a href="art"><pre>          Arts          </pre></a></h4>
+              <p class="description">
+              <i class="bx bx-chevron-right"></i><a href="#">Fashion</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Music</a><br>
+              <i class="bx bx-chevron-right"></i><a href="#">Digital</a><br>
+              </p>
             </div>
           </div>
 
@@ -183,8 +206,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Contact Us</h2>
-          <p>Contact us to get started</p>
+          <p>Contact Us</p>
         </div>
 
         <div class="row">
@@ -209,7 +231,9 @@
                 <p>+1 5589 55488 55s</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14500.23890551969!2d46.67716345273224!3d24.690473500000017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f033ac58dc4e9%3A0xa680f59328531a25!2z2KjYsdisINin2YTZgdmK2LXZhNmK!5e0!3m2!1sen!2ssa!4v1617662896063!5m2!1sen!2ssa" 
+
+              frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -274,7 +298,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>NAHR</h3>
             <p>
-              A108 olaya Street <br>
+              A108 Olaya Street <br>
               Riyadh, KSA 535022<br>
               Saudi Arabia <br><br>
               <strong>Phone:</strong> +1 5589 55488 55<br>
@@ -293,13 +317,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Courses</h4>
+            <h4>Our Providers</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.skillshare.com">Skillshare</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Coursera.com">Coursera</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Udemy.com">Udemy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.generalassemb.ly">General Assembly</a></li>
+          
             </ul>
           </div>
 
