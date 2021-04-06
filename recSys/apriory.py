@@ -9,28 +9,29 @@ records = []
 for i in range(0, data_len):
     records.append([str(train_data.values[i,j]) for j in range(2)])
 print("hello")
-association_rules = apriori(records, min_support=0.001, min_confidence=0.2, min_lift=5, min_length=2)
+association_rules = apriori(records, min_support=0.001, min_confidence=0.01, min_lift=1, max_length=4)
 association_results = list(association_rules)
 print(len(association_results))
 
+print(association_results)
 
-for item in association_results:
-    print("hello")
+# # for item in association_results:
+#     print("hello")
 
-    # first index of the inner list
-    # Contains base item and add item
-    pair = item[0] 
-    items = [x for x in pair]
-    print("Rule: " + items[0] + " -> " + items[1])
+#     # first index of the inner list
+#     # Contains base item and add item
+#     pair = item[0] 
+#     items = [x for x in pair]
+#     print("Rule: " + items[0] + " -> " + items[1])
 
-    #second index of the inner list
-    print("Support: " + str(item[1]))
+#     #second index of the inner list
+#     print("Support: " + str(item[1]))
 
-    #third index of the list located at 0th
-    #of the third index of the inner list
+#     #third index of the list located at 0th
+#     #of the third index of the inner list
 
-    print("Confidence: " + str(item[2][0][2]))
-    print("Lift: " + str(item[2][0][3]))
-    print("=====================================")
+#     print("Confidence: " + str(item[2][0][2]))
+#     print("Lift: " + str(item[2][0][3]))
+#     print("=====================================")
 
 
