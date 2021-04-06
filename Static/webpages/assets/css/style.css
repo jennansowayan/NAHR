@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 position: fixed;}
   .fixed-background{padding: 10rem 0;}
 
-  
+
 
 
 
@@ -148,7 +148,7 @@ position: fixed;}
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -262,7 +262,7 @@ position: fixed;}
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #7a6960;
