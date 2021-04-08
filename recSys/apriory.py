@@ -1,7 +1,7 @@
 from apyori import apriori
 import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
-from mlxtend.frequent_patterns import apriori, fpmax, fpgrowth
+from mlxtend.frequent_patterns import apriori, fpmax, fpgrowth, association_rules
 
 
 train_data = pd.read_csv( '/Users/jennansowayan/Nahr/NAHR/train_data.csv', header=None)
@@ -62,3 +62,7 @@ frequent_itemsets = fpgrowth(df, min_support=0.006, use_colnames=True)
 # frequent_itemsets = fpmax(df, min_support=0.6, use_colnames=True)
 
 print(frequent_itemsets)
+
+
+rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.5)
+print(rules)
