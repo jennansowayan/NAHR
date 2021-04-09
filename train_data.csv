@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿programming,math
 =======
 programming
@@ -16,6 +17,9 @@ music
 da
 programming,math
 >>>>>>> 8b2b25c2eca8ac3bffac302ee2fe965a7a341a4c
+=======
+﻿programming,math
+>>>>>>> b0e15c1de2597e0d5c7cc99433829ecfe87f4ee2
 programming,ux
 programming,security
 programming,pm
@@ -30,6 +34,10 @@ accounting,math
 bio,math
 bio,da
 fashion,da
+fashion,da
+fashion,da
+fashion,da
+fashion,da
 ux,fashion
 ux,programming
 ux,security
@@ -41,6 +49,7 @@ fashion,ux
 fashion,music
 fashion,da
 math,fashion
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 programming,math,ux
@@ -54,6 +63,8 @@ programming,math,security
 programming,phy,math
 music,da,ux,pm,marketing
 >>>>>>> 8b2b25c2eca8ac3bffac302ee2fe965a7a341a4c
+=======
+>>>>>>> b0e15c1de2597e0d5c7cc99433829ecfe87f4ee2
 music,da
 programming,math
 programming,math
@@ -67,7 +78,11 @@ programming,math
 programming,math
 programming,math
 <<<<<<< HEAD
+<<<<<<< HEAD
 programming,math
 =======
 programming,math
 >>>>>>> 8b2b25c2eca8ac3bffac302ee2fe965a7a341a4c
+=======
+programming,math
+>>>>>>> b0e15c1de2597e0d5c7cc99433829ecfe87f4ee2
