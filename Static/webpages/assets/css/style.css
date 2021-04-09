@@ -12,7 +12,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: #212529;
 }
-
+.bgc {
+  background-color: #212529;
+}
 a {
   color: #eb5d1e;
   text-decoration: none;

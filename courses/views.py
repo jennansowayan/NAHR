@@ -25,6 +25,8 @@ def art(request):
  return render(request, "art_courses.html", {} )
 # + analize response => get related subcats from the rules
 # + apply recommendations    
+def courses(request):
+ return render(request,"courses.html",{})
 
 def quiz(request):
   if request.method == 'POST':  #submits the quiz
