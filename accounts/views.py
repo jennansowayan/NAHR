@@ -57,8 +57,9 @@ def logoutUser(request):
 def home(request):
   return render(request, 'accounts/dashboard.html', {})
 
-def coursesPage(request):
-  return render(request, 'accounts/courses.html', {})
+def quiz(request):
+   return render(request,'accounts/quiz.html',{})
+   
 @login_required
 def profile(request):
   return render(request, 'accounts/profile.html',{})
