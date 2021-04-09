@@ -1,0 +1,400 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <style>
+    .top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+h5{color:white;}
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+.btn.custom-btn{
+  background-color:#ef7f4d;
+	
+}
+
+#search {
+    width:90%;
+}
+
+.searchicon {
+    color:#5CB85C;
+}
+
+.items-collection{
+    margin:20px 0 0 0;
+}
+.custom-checkbox input[type="checkbox"] {
+  position: fixed;
+  z-index: -10;
+  opacity: 0;
+  left: 0;
+  top: 0;
+}
+.items-collection label.btn.custom-btn:active{
+  background-color:rgb(30, 75, 141);
+  border: 1px solid rgb(30, 75, 141);;
+    color:white;
+}
+button.selected{
+  color:red;
+}
+.items-collection label.btn.custom-btn{
+  width:90%;
+  background-color:#ef7f4d;
+    border:1px solid #ef7f4d;
+    margin:5px;
+    border-radius: 17px;
+    color: #ef7f4d;
+}
+.items-collection label .itemcontent{
+    width:100%;
+}
+.items-collection.btn-group{
+    width:90%
+}
+</style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NAHR</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons --> 
+  <link rel="shortcut icon" href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}">
+
+  <link href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <!-- Vendor CSS Files -->
+  
+  <link href="{% static 'webpages/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'webpages/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars - v4.1.0
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href=""><img src="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" alt="" class="img-fluid"></a>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link  active" href="dashboard.html">Home</a></li>
+          <li><a class="nav-link " href="">Courses</a></li>
+          
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+          {% if user.is_authenticated %}
+          
+          
+          <span><a href=logout/> Logout</a></span>
+          <span><a href=profile/> Profile &nbsp &nbsp</a></span>
+          <br><br>
+          <span> Hi, {{request.user}} </span>
+          {% else %}
+
+          <li><a class="getstarted scrollto" href="templates/login.html">LOGIN</a></li>
+          {% endif %}
+         
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<!-- QUIZ BODY START-->
+<br>
+<br>
+<section class="align-items-center">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-4">
+        <img src="{% static 'webpages/assets/img/about-img.svg' %}" class="img-fluid animated" alt="">
+        <h3 class=" top-left"><br><br><br>Click on the feilds you're<br> interested in.</h3>
+        <h4 class="top-left"><br><br><br><br><br><br>This will help us recommend<br> courses to you more accurately.</h4>
+      </div>
+
+      <div class="col-8">
+        <div class="row">
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <div class="items-collection">
+                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group">
+                            <label class="btn custom-btn target custom-checkbox">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="TECH" autocomplete="off" value="cybersecurity">
+                                    <h5>Cybersecurity</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div> <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                  <div class="info-block block-info clearfix">
+                      <div data-toggle="buttons" class="btn-group">
+                          <label class="btn custom-btn target custom-checkbox">
+                              <div class="itemcontent">
+                                  <input type="checkbox" name="SCIENCE" autocomplete="off" value="math">
+                                  <h5>Math</h5>
+                              </div>
+                          </label>
+                      </div>
+                  </div>
+              </div> 
+              <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <div class="info-block block-info clearfix">
+                    <div data-toggle="buttons" class="btn-group">
+                        <label class="btn custom-btn target custom-checkbox">
+                            <div class="itemcontent">
+                                <input type="checkbox" name="ART" autocomplete="off" value="photography">
+                                <h5>Photography</h5>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div> 
+            <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+              <div class="info-block block-info clearfix">
+                  <div data-toggle="buttons" class="btn-group">
+                      <label class="btn custom-btn target custom-checkbox">
+                          <div class="itemcontent">
+                              <input type="checkbox" name="ART" autocomplete="off" value="fd">
+                              <h5>Fashion Design</h5>
+                          </div>
+                      </label>
+                  </div>
+              </div>
+          </div> 
+          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <div class="info-block block-info clearfix">
+                <div data-toggle="buttons" class="btn-group">
+                    <label class="btn custom-btn target custom-checkbox">
+                        <div class="itemcontent">
+                            <input type="checkbox" name="TECH" autocomplete="off" value="ai">
+                            <h5>Artificial Intelligence</h5>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+          <div class="info-block block-info clearfix">
+              <div data-toggle="buttons" class="btn-group">
+                  <label class="btn custom-btn target custom-checkbox">
+                      <div class="itemcontent">
+                          <input type="checkbox" name="ART" autocomplete="off" value="Music">
+                          <h5>Music</h5>
+                      </div>
+                  </label>
+              </div>
+          </div>
+      </div>
+          </div></div></div>
+
+
+
+          <div class="col-sm-6"> <div class="form-group">
+            <div class="items-collection">
+              <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                <div class="info-block block-info clearfix">
+                    <div data-toggle="buttons" class="btn-group">
+                        <label class="btn custom-btn target custom-checkbox">
+                            <div class="itemcontent">
+                                <input type="checkbox" name="BUSINESS" autocomplete="off" value="pm">
+                                <h5>Project Management</h5>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div> 
+            <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+              <div class="info-block block-info clearfix">
+                  <div data-toggle="buttons" class="btn-group">
+                      <label class="btn custom-btn target custom-checkbox">
+                          <div class="itemcontent">
+                              <input type="checkbox" name="BUSINESS" autocomplete="off" value="Accounting">
+                              <h5>Accounting</h5>
+                          </div>
+                      </label>
+                  </div>
+              </div>
+          </div> 
+          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <div class="info-block block-info clearfix">
+                <div data-toggle="buttons" class="btn-group">
+                    <label class="btn custom-btn target custom-checkbox">
+                        <div class="itemcontent">
+                            <input type="checkbox" name="SCIENCE" autocomplete="off" value="Chemistry">
+                            <h5>Chemistry</h5>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div> 
+        <div class="col">
+          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
+            <div class="info-block block-info clearfix">
+                <div data-toggle="buttons" class="btn-group">
+                    <label class="btn custom-btn target custom-checkbox">
+                        <div class="itemcontent">
+                            <input type="checkbox" name="BUSINESS" autocomplete="off" value="marketing">
+                            <h5>Marketing</h5>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>  
+        </div></div><a action="#" method="POST" href="courses/" class="btn custom-btn" >Next</a></div>
+
+
+          
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>  
+</section>
+<!-- QUIZ BODY END-->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Be the first to know about our latest online courses</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>NAHR</h3>
+            <p>
+              A108 Olaya Street <br>
+              Riyadh, KSA 535022<br>
+              Saudi Arabia <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@nahr.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Courses</a></li>
+            
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Providers</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.skillshare.com">Skillshare</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Coursera.com">Coursera</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Udemy.com">Udemy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.generalassemb.ly">General Assembly</a></li>
+          
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>FOLLOW US</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>NAHR</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'webpages/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'webpages/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

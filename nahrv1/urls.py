@@ -23,8 +23,9 @@ urlpatterns = [
     path('science/', views.science, name="science"),
     path('business/', views.business, name="business"),
     path('art/', views.art, name="art"),
+    path('courses/', views.courses, name="courses"),
     path('', include('accounts.urls')
     #path('register', registerPage),
-   # path('login', loginPage)
+    #path('login', loginPage)
    )
 ]
