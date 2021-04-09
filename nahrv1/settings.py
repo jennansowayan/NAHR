@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'accounts',
     'recSys',
     'courses',
+    'multiselectfield',
 ]
 
 

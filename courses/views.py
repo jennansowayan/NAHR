@@ -28,11 +28,7 @@ def art(request):
 def courses(request):
  return render(request,"courses.html",{})
 
-def quiz(request):
-  if request.method == 'POST':  #submits the quiz
-       form = quizForm(request.POST) #?
-       if form.is_valid():
-            intrest = form.save()
+
 			# if intrest.objects.all().count() % 10 == 0: 
 			# 	generate_new_rules()
 				

@@ -10,20 +10,20 @@ data_len= len(train_data)
 
 
 records = []
-for i in range(0, data_len):
-<<<<<<< HEAD
-    records.append([str(train_data.values[i,j]) for j in range(1)])
-print("hello")
-association_rules = apriori(records, min_support=0.00001, min_confidence=0.8, min_lift=2, min_length=0)
 
-association_results = list(association_rules)
-print(records)
-print(len(association_results))
-=======
-    records.append([str(train_data.values[i,j]) for j in range(2)])
->>>>>>> b0e15c1de2597e0d5c7cc99433829ecfe87f4ee2
+records.append([str(train_data.values[i,j]) for j in range(2)])
+
 
 print(records)
+#   records.append([str(train_data.values[i,j]) for j in range(1)])
+#print("hello")
+#association_rules = apriori(records, min_support=0.00001, min_confidence=0.8, min_lift=2, min_length=0)
+
+#association_results = list(association_rules)
+#print(records)
+#print(len(association_results))
+
+
 # print("hello")
 # association_rules = apriori(records, min_support=0.001, min_confidence=0.01, min_lift=1, max_length=4)
 # association_results = list(association_rules)
