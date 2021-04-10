@@ -150,154 +150,29 @@ button.selected{
 
       <div class="col-4">
         <img src="{% static 'webpages/assets/img/about-img.svg' %}" class="img-fluid animated" alt="">
-        <h3 class=" top-left"><br><br><br>Click on the feilds you're<br> interested in.</h3>
+        </div>
+                         
+      
+<h3 class=" top-left"><br><br><br>Click on the feilds you're<br> interested in.</h3>
         <h4 class="top-left"><br><br><br><br><br><br>This will help us recommend<br> courses to you more accurately.</h4>
-      </div>
 
-      <div class="col-8">
-        <div class="row">
 
-          <div class="col-sm-6">
-            <div class="form-group">
-              <div class="items-collection">
-                <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                    <div class="info-block block-info clearfix">
-                        <div data-toggle="buttons" class="btn-group">
-                            <label class="btn custom-btn target custom-checkbox">
-                                <div class="itemcontent">
-                                    <input type="checkbox" name="TECH" autocomplete="off" value="cybersecurity">
-                                    <h5>Cybersecurity</h5>
-                                </div>
-                            </label>
-                        </div>
-                    </div>
-                </div> <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                  <div class="info-block block-info clearfix">
-                      <div data-toggle="buttons" class="btn-group">
-                          <label class="btn custom-btn target custom-checkbox">
-                              <div class="itemcontent">
-                                  <input type="checkbox" name="SCIENCE" autocomplete="off" value="math">
-                                  <h5>Math</h5>
-                              </div>
-                          </label>
-                      </div>
-                  </div>
-              </div> 
-              <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                <div class="info-block block-info clearfix">
-                    <div data-toggle="buttons" class="btn-group">
-                        <label class="btn custom-btn target custom-checkbox">
-                            <div class="itemcontent">
-                                <input type="checkbox" name="ART" autocomplete="off" value="photography">
-                                <h5>Photography</h5>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div> 
-            <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-              <div class="info-block block-info clearfix">
-                  <div data-toggle="buttons" class="btn-group">
-                      <label class="btn custom-btn target custom-checkbox">
-                          <div class="itemcontent">
-                              <input type="checkbox" name="ART" autocomplete="off" value="fd">
-                              <h5>Fashion Design</h5>
-                          </div>
-                      </label>
-                  </div>
-              </div>
-          </div> 
-          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <div class="info-block block-info clearfix">
-                <div data-toggle="buttons" class="btn-group">
-                    <label class="btn custom-btn target custom-checkbox">
-                        <div class="itemcontent">
-                            <input type="checkbox" name="TECH" autocomplete="off" value="ai">
-                            <h5>Artificial Intelligence</h5>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-          <div class="info-block block-info clearfix">
-              <div data-toggle="buttons" class="btn-group">
-                  <label class="btn custom-btn target custom-checkbox">
-                      <div class="itemcontent">
-                          <input type="checkbox" name="ART" autocomplete="off" value="Music">
-                          <h5>Music</h5>
-                      </div>
-                  </label>
-              </div>
-          </div>
-      </div>
-          </div></div></div>
+<form>
+  <form method="POST" action="">
+{% csrf_token %}
+
+{{ form.as_p }}
+
+<input type="submit" value="Save" >
+
+<a href="/courses" class="ml-2">Submit</a>
 
 
 
-          <div class="col-sm-6"> <div class="form-group">
-            <div class="items-collection">
-              <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-                <div class="info-block block-info clearfix">
-                    <div data-toggle="buttons" class="btn-group">
-                        <label class="btn custom-btn target custom-checkbox">
-                            <div class="itemcontent">
-                                <input type="checkbox" name="BUSINESS" autocomplete="off" value="pm">
-                                <h5>Project Management</h5>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-            </div> 
-            <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-              <div class="info-block block-info clearfix">
-                  <div data-toggle="buttons" class="btn-group">
-                      <label class="btn custom-btn target custom-checkbox">
-                          <div class="itemcontent">
-                              <input type="checkbox" name="BUSINESS" autocomplete="off" value="Accounting">
-                              <h5>Accounting</h5>
-                          </div>
-                      </label>
-                  </div>
-              </div>
-          </div> 
-          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <div class="info-block block-info clearfix">
-                <div data-toggle="buttons" class="btn-group">
-                    <label class="btn custom-btn target custom-checkbox">
-                        <div class="itemcontent">
-                            <input type="checkbox" name="SCIENCE" autocomplete="off" value="Chemistry">
-                            <h5>Chemistry</h5>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </div> 
-        <div class="col">
-          <div class="items col-xs-6 col-sm-3 col-md-3 col-lg-3">
-            <div class="info-block block-info clearfix">
-                <div data-toggle="buttons" class="btn-group">
-                    <label class="btn custom-btn target custom-checkbox">
-                        <div class="itemcontent">
-                            <input type="checkbox" name="BUSINESS" autocomplete="off" value="marketing">
-                            <h5>Marketing</h5>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </div>  
-        </div></div><a action="#" method="POST" href="courses/" type="submit" class="btn custom-btn" >Submit</a></div>
 
 
-          
-        </div>
+</form>
 
-      </div>
-
-    </div>
-
-  </div>  
-</section>
 <!-- QUIZ BODY END-->
   <!-- ======= Footer ======= -->
   <footer id="footer">
