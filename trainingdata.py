@@ -158,18 +158,18 @@
 ['math', 'phy'],
 ['math', 'bio'],
 ['math', 'bio'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
+['math', 'acc'],
 ['math', 'da'],
 ['math', 'da'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
-['math', 'acc'],
 # end math 2
 ['pm', 'prog'],
 ['pm', 'prog'],
@@ -354,9 +354,6 @@
 ['prog', 'math', 'phy'],
 ['prog', 'math', 'phy'],
 ['prog', 'math', 'phy'],
-['prog', 'math', 'pm'],
-['prog', 'math', 'pm'],
-['prog', 'math', 'pm'],
 ['prog', 'math', 'da'],
 # end prog math
 ['prog', 'pm', 'ai'],
@@ -415,12 +412,10 @@
 ['ai', 'math', 'prog'],
 ['ai', 'math', 'cyber'],
 ['ai', 'math', 'phy'],
-['ai', 'math', 'pm'],
 ['ai', 'math', 'da'],
 # end ai math
 ['ai', 'pm', 'prog'],
 ['ai', 'pm', 'cyber'],
-['ai', 'pm', 'phy'],
 ['ai', 'pm', 'da'],
 # end ai pm
 ['ai', 'da', 'prog'],
@@ -444,13 +439,11 @@
 ['cyber', 'phy', 'prog'],
 ['cyber', 'phy', 'ai'],
 ['cyber', 'phy', 'math'],
-['cyber', 'phy', 'pm'],
 ['cyber', 'phy', 'da'],
 # end cyber phy
 ['cyber', 'math', 'prog'],
 ['cyber', 'math', 'ai'],
 ['cyber', 'math', 'phy'],
-['cyber', 'math', 'pm'],
 ['cyber', 'math', 'da'],
 # end cyber math
 ['cyber', 'pm', 'prog'],
@@ -477,20 +470,17 @@
 ['phy', 'prog', 'ai'],
 ['phy', 'prog', 'cyber'],
 ['phy', 'prog', 'math'],
-['phy', 'prog', 'pm'],
 ['phy', 'prog', 'da'],
 # end phy prog
 ['phy', 'ai', 'prog'],
 ['phy', 'ai', 'cyber'],
 ['phy', 'ai', 'math'],
 ['phy', 'ai', 'prog'],
-['phy', 'ai', 'pm'],
 ['phy', 'ai', 'da'],
 # end phy ai
 ['phy', 'cyber', 'prog'],
 ['phy', 'cyber', 'ai'],
 ['phy', 'cyber', 'matb'],
-['phy', 'cyber', 'pm'],
 ['phy', 'cyber', 'da'],
 # end phy cyber
 ['phy', 'chem', 'bio'],
@@ -506,6 +496,195 @@
 ['phy', 'math', 'bio'],
 ['phy', 'math', 'da'],
 # end phy math
+['phy', 'da', 'prog'],
+['phy', 'da', 'ai'],
+['phy', 'da', 'cyber'],
+['phy', 'da', 'math'],
+# end phy da
+# end phy 3
+['bio', 'chem', 'phy'],
+['bio', 'chem', 'math'],
+# end bio chem
+['bio', 'phy', 'chem'],
+['bio', 'phy', 'math'],
+# end bio phy
+['bio', 'math', 'chem'],
+['bio', 'math', 'phy'],
+# end bio math
+# end bio 3
+['math', 'prog', 'ai'],
+['math', 'prog', 'cyber'],
+['math', 'prog', 'phy'],
+['math', 'prog', 'da'],
+# end math prog
+['math', 'ai', 'prog'],
+['math', 'ai', 'cyber'],
+['math', 'ai', 'phy'],
+['math', 'ai', 'da'],
+# end math ai
+['math', 'cyber', 'prog'],
+['math', 'cyber', 'ai'],
+['math', 'cyber', 'phy'],
+['math', 'cyber', 'da'],
+# end math cyber
+['math', 'chem', 'phy'],
+['math', 'chem', 'bio'],
+# end math chem
+['math', 'phy', 'prog'],
+['math', 'phy', 'ai'],
+['math', 'phy', 'cyber'],
+['math', 'phy', 'chem'],
+['math', 'phy', 'bio'],
+['math', 'phy', 'da'],
+# end math phy
+['math', 'bio', 'chem'],
+['math', 'bio', 'phy'],
+# end math bio
+['math', 'da', 'prog'],
+['math', 'da', 'ai'],
+['math', 'da', 'cyber'],
+['math', 'da', 'phy'],
+# end math da
+# end math 3
+['pm', 'prog', 'ai'],
+['pm', 'prog', 'cyber'],
+['pm', 'prog', 'da'],
+#end pm prog
+['pm', 'ai', 'prog'],
+['pm', 'ai', 'cyber'],
+['pm', 'ai', 'da'],
+# end pm ai
+['pm', 'cyber', 'prog'],
+['pm', 'cyber', 'ai'],
+['pm', 'cyber', 'da'],
+# end pm cyber
+['pm', 'acc', 'mark'],
+# end pm acc
+['pm', 'mark', 'fash'],
+['pm', 'mark', 'music'],
+['pm', 'mark', 'da'],
+# end pm mark
+['pm', 'fash', 'mark'],
+['pm', 'fash', 'music'],
+['pm', 'fash', 'da'],
+# end pm fash
+['pm', 'music', 'mark'],
+['pm', 'music', 'fash'],
+['pm', 'music', 'da'],
+# end pm music
+['pm', 'da', 'prog'],
+['pm', 'da', 'ai'],
+['pm', 'da', 'cyber'],
+['pm', 'da', 'mark'],
+['pm', 'da', 'fash'],
+['pm', 'da', 'music'],
+# end pm da
+# end pm 3
+['acc', 'pm', 'mark'],
+# end acc pm
+['acc', 'mark', 'pm'],
+# end acc mark
+# end acc 3
+['mark', 'pm', 'acc'],
+['mark', 'pm', 'fash'],
+['mark', 'pm', 'music'],
+['mark', 'pm', 'da'],
+# end mark pm
+['mark', 'acc', 'pm'],
+# end mark acc
+['mark', 'fash', 'pm'],
+['mark', 'fash', 'music'],
+['mark', 'fash', 'da'],
+# end mark fash
+['mark', 'music', 'pm'],
+['mark', 'music', 'fash'],
+['mark', 'music', 'da'],
+# end mark music
+['mark', 'da', 'pm'],
+['mark', 'da', 'fash'],
+['mark', 'da', 'music'],
+# end mark da
+['fash', 'pm', 'mark'],
+['fash', 'pm', 'music'],
+['fash', 'pm', 'da'],
+#end fash pm
+['fash', 'mark', 'pm'],
+['fash', 'mark', 'music'],
+['fash', 'mark', 'da'],
+# end fash mark
+['fash', 'music', 'pm'],
+['fash', 'music', 'music'],
+['fash', 'music', 'da'],
+# end fash music
+['fash', 'da', 'pm'],
+['fash', 'da', 'mark'],
+['fash', 'da', 'music'],
+# end fash da
+['music', 'pm', 'fash'],
+['music', 'pm', 'music'],
+['music', 'pm', 'da'],
+# end music pm
+['music', 'mark', 'pm'],
+['music', 'mark', 'fash'],
+['music', 'mark', 'da'],
+# end music mark
+['music', 'fash', 'pm'],
+['music', 'fash', 'mark'],
+['music', 'fash', 'da'],
+# end music fash
+['music', 'da', 'pm'],
+['music', 'da', 'mark'],
+['music', 'da', 'fash'],
+# end music da
+# end music 3
+['da', 'prog', 'ai'],
+['da', 'prog', 'cyber'],
+['da', 'prog', 'phy'],
+['da', 'prog', 'math'],
+['da', 'prog', 'pm'],
+# end da prog
+['da', 'ai', 'prog'],
+['da', 'ai', 'cyber'],
+['da', 'ai', 'phy'],
+['da', 'ai', 'math'],
+['da', 'ai', 'pm'],
+# end da ai
+['da', 'cyber', 'prog'],
+['da', 'cyber', 'ai'],
+['da', 'cyber', 'phy'],
+['da', 'cyber', 'math'],
+['da', 'cyber', 'pm'],
+# end da cyber
+['da', 'phy', 'prog'],
+['da', 'phy', 'ai'],
+['da', 'phy', 'cyber'],
+['da', 'phy', 'math'],
+# end da phy
+['da', 'math', 'prog'],
+['da', 'math', 'ai'],
+['da', 'math', 'cyber'],
+['da', 'math', 'phy'],
+# end da math
+['da', 'pm', 'prog'],
+['da', 'pm', 'ai'],
+['da', 'pm', 'cyber'],
+['da', 'pm', 'mark'],
+['da', 'pm', 'fash'],
+['da', 'pm', 'music'],
+# end da pm
+['da', 'mark', 'pm'],
+['da', 'mark', 'fash'],
+['da', 'mark', 'music'],
+# end da mark
+['da', 'fash', 'pm'],
+['da', 'fash', 'mark'],
+['da', 'fash', 'music'],
+# end da fash
+['da', 'music', 'pm'],
+['da', 'music', 'mark'],
+['da', 'music', 'fash'],
+# end da music
+# end da 3
 
 #prog ai cyber
 #chem phy bio math
