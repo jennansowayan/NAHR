@@ -304,21 +304,17 @@
 ['prog', 'ai', 'cyber'],
 ['prog', 'ai', 'cyber'],
 ['prog', 'ai', 'cyber'],
-
 ['prog', 'ai', 'phy'],
 ['prog', 'ai', 'phy'],
 ['prog', 'ai', 'phy'],
 ['prog', 'ai', 'phy'],
-
 ['prog', 'ai', 'math'],
 ['prog', 'ai', 'math'],
 ['prog', 'ai', 'math'],
 ['prog', 'ai', 'math'],
-
 ['prog', 'ai', 'pm'],
 ['prog', 'ai', 'pm'],
 ['prog', 'ai', 'pm'],
-
 ['prog', 'ai', 'da'],
 ['prog', 'ai', 'da'],
 # end prog ai
@@ -327,80 +323,60 @@
 ['prog', 'cyber', 'ai'],
 ['prog', 'cyber', 'ai'],
 ['prog', 'cyber', 'ai'],
-
 ['prog', 'cyber', 'phy'],
 ['prog', 'cyber', 'phy'],
-
 ['prog', 'cyber', 'math'],
 ['prog', 'cyber', 'math'],
 ['prog', 'cyber', 'math'],
 ['prog', 'cyber', 'math'],
-
 ['prog', 'cyber', 'da'],
 ['prog', 'cyber', 'da'],
-
 ['prog', 'cyber', 'pm'],
 ['prog', 'cyber', 'pm'],
-
 # end prog cyber
 ['prog', 'phy', 'ai'],
 ['prog', 'phy', 'ai'],
-
 ['prog', 'phy', 'cyber'],
 ['prog', 'phy', 'cyber'],
-
 ['prog', 'phy', 'math'],
 ['prog', 'phy', 'math'],
 ['prog', 'phy', 'math'],
-
 ['prog', 'phy', 'da'],
 # end prog phy
 ['prog', 'math', 'ai'],
 ['prog', 'math', 'ai'],
 ['prog', 'math', 'ai'],
 ['prog', 'math', 'ai'],
-
 ['prog', 'math', 'cyber'],
 ['prog', 'math', 'cyber'],
 ['prog', 'math', 'cyber'],
 ['prog', 'math', 'cyber'],
-
 ['prog', 'math', 'phy'],
 ['prog', 'math', 'phy'],
 ['prog', 'math', 'phy'],
-
 ['prog', 'math', 'pm'],
 ['prog', 'math', 'pm'],
 ['prog', 'math', 'pm'],
-
 ['prog', 'math', 'da'],
 # end prog math
 ['prog', 'pm', 'ai'],
 ['prog', 'pm', 'ai'],
 ['prog', 'pm', 'ai'],
-
 ['prog', 'pm', 'cyber'],
 ['prog', 'pm', 'cyber'],
-
 ['prog', 'pm', 'da'],
-
 # end prog pm
 ['prog', 'da', 'ai'],
 ['prog', 'da', 'ai'],
-
 ['prog', 'da', 'cyber'],
 ['prog', 'da', 'cyber'],
-
 ['prog', 'da', 'phy'],
 ['prog', 'da', 'phy'],
-
 ['prog', 'da', 'math'],
 ['prog', 'da', 'math'],
 ['prog', 'da', 'math'],
-
 ['prog', 'da', 'pm'],
 ['prog', 'da', 'pm'],
-
 # end prog da
 # end prog 3
 ['ai', 'prog', 'cyber'],
@@ -408,34 +384,25 @@
 ['ai', 'prog', 'cyber'],
 ['ai', 'prog', 'cyber'],
 ['ai', 'prog', 'cyber'],
-
 ['ai', 'prog', 'phy'],
 ['ai', 'prog', 'phy'],
 ['ai', 'prog', 'phy'],
 ['ai', 'prog', 'phy'],
-
-
 ['ai', 'prog', 'math'],
 ['ai', 'prog', 'math'],
 ['ai', 'prog', 'math'],
 ['ai', 'prog', 'math'],
-
-
 ['ai', 'prog', 'pm'],
 ['ai', 'prog', 'pm'],
 ['ai', 'prog', 'pm'],
-
-
 ['ai', 'prog', 'da'],
 ['ai', 'prog', 'da'],
-
 # end ai prog
 ['ai', 'cyber', 'prog'],
 ['ai', 'cyber', 'prog'],
 ['ai', 'cyber', 'prog'],
 ['ai', 'cyber', 'prog'],
 ['ai', 'cyber', 'prog'],
-
 ['ai', 'cyber', 'phy'],
 ['ai', 'cyber', 'math'],
 ['ai', 'cyber', 'da'],
@@ -462,6 +429,83 @@
 ['ai', 'da', 'math'],
 ['ai', 'da', 'pm'],
 # end ai da
+['cyber', 'prog', 'ai'],
+['cyber', 'prog', 'phy'],
+['cyber', 'prog', 'math'],
+['cyber', 'prog', 'pm'],
+['cyber', 'prog', 'da'],
+# end cyber prog
+['cyber', 'ai', 'prog'],
+['cyber', 'ai', 'phy'],
+['cyber', 'ai', 'math'],
+['cyber', 'ai', 'pm'],
+['cyber', 'ai', 'da'],
+# end cyber ai
+['cyber', 'phy', 'prog'],
+['cyber', 'phy', 'ai'],
+['cyber', 'phy', 'math'],
+['cyber', 'phy', 'pm'],
+['cyber', 'phy', 'da'],
+# end cyber phy
+['cyber', 'math', 'prog'],
+['cyber', 'math', 'ai'],
+['cyber', 'math', 'phy'],
+['cyber', 'math', 'pm'],
+['cyber', 'math', 'da'],
+# end cyber math
+['cyber', 'pm', 'prog'],
+['cyber', 'pm', 'ai'],
+['cyber', 'pm', 'da'],
+# end cyber pm
+['cyber', 'da', 'prog'],
+['cyber', 'da', 'ai'],
+['cyber', 'da', 'phy'],
+['cyber', 'da', 'math'],
+['cyber', 'da', 'pm'],
+# end cyber da
+# end cyber 3
+['chem', 'phy', 'bio'],
+['chem', 'phy', 'math'],
+# end chem phy
+['chem', 'bio', 'phy'],
+['chem', 'bio', 'math'],
+# end chem bio
+['chem', 'math', 'phy'],
+['chem', 'math', 'bio'],
+# end chem math
+# end chem 3
+['phy', 'prog', 'ai'],
+['phy', 'prog', 'cyber'],
+['phy', 'prog', 'math'],
+['phy', 'prog', 'pm'],
+['phy', 'prog', 'da'],
+# end phy prog
+['phy', 'ai', 'prog'],
+['phy', 'ai', 'cyber'],
+['phy', 'ai', 'math'],
+['phy', 'ai', 'prog'],
+['phy', 'ai', 'pm'],
+['phy', 'ai', 'da'],
+# end phy ai
+['phy', 'cyber', 'prog'],
+['phy', 'cyber', 'ai'],
+['phy', 'cyber', 'matb'],
+['phy', 'cyber', 'pm'],
+['phy', 'cyber', 'da'],
+# end phy cyber
+['phy', 'chem', 'bio'],
+['phy', 'chem', 'math'],
+# end phy chem
+['phy', 'bio', 'chem'],
+['phy', 'bio', 'math'],
+# end phy bio
+['phy', 'math', 'prog'],
+['phy', 'math', 'ai'],
+['phy', 'math', 'cyber'],
+['phy', 'math', 'chem'],
+['phy', 'math', 'bio'],
+['phy', 'math', 'da'],
+# end phy math
 
 #prog ai cyber
 #chem phy bio math
