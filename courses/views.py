@@ -28,3 +28,10 @@ def art(request):
 def courses(request):
  return render(request,"courses.html",{})
 
+
+			# if intrest.objects.all().count() % 10 == 0: 
+			# 	generate_new_rules()
+				
+			# return redirect(recommned)
+
+

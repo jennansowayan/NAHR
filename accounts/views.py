@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 from .models import *
 from .forms import CreateUserForm
+from .forms import intrestForm
 #from .filters import OrderFilter
 
 def registerPage(request):
@@ -57,8 +58,14 @@ def logoutUser(request):
 def home(request):
   return render(request, 'accounts/dashboard.html', {})
 
-def quiz(request):
-   return render(request,'accounts/quiz.html',{})
+def intrestForm_view(request):
+  form = intrestForm(request.POST)
+  if form.is_valid():
+      form.save()
+
+      return redirect('login')
+  context = { 'form': form}
+  return render(request,'accounts/quiz.html',context)
    
 @login_required
 def profile(request):

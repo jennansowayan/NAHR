@@ -5,15 +5,25 @@ from django.db import models
 from NAHR.recSys.models import rules
 
 
-train_data = pd.read_csv( '/Users/jennansowayan/Nahr/NAHR/train_data.csv', header=None)
+train_data = pd.read_csv( '/Users/shahadalmugrin/Desktop/venv2/nahrv1/train_data.csv', delim_whitespace=True, header=None)
 data_len= len(train_data)
 
 
 records = []
-for i in range(0, data_len):
-    records.append([str(train_data.values[i,j]) for j in range(2)])
+
+records.append([str(train_data.values[i,j]) for j in range(2)])
+
 
 print(records)
+#   records.append([str(train_data.values[i,j]) for j in range(1)])
+#print("hello")
+#association_rules = apriori(records, min_support=0.00001, min_confidence=0.8, min_lift=2, min_length=0)
+
+#association_results = list(association_rules)
+#print(records)
+#print(len(association_results))
+
+
 # print("hello")
 # association_rules = apriori(records, min_support=0.001, min_confidence=0.01, min_lift=1, max_length=4)
 # association_results = list(association_rules)
