@@ -72,13 +72,13 @@
           {% if user.is_authenticated %}
           
           
-          <span><a href=logout/> Logout</a></span>
-          <span><a href=profile/> Profile &nbsp &nbsp</a></span>
+          <span><a href=../logout> Logout</a></span>
+          <span><a href=../profile> Profile &nbsp &nbsp</a></span>
           <br><br>
           <span> Hi, {{request.user}} </span>
           {% else %}
 
-          <li><a class="getstarted scrollto" href="login/">LOGIN</a></li>
+          <li><a class="getstarted scrollto" href="../login/">LOGIN</a></li>
           {% endif %}
          
         </ul>
