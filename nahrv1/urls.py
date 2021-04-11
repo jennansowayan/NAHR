@@ -27,6 +27,7 @@ urlpatterns = [
     path('science/', views.science, name="science"),
     path('business/', views.business, name="business"),
     path('art/', views.art, name="art"),
-    
+    path('courses/', views.courses, name="courses"),
+
    
 ]
