@@ -2,10 +2,10 @@ import pandas as pd
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, fpmax, fpgrowth, association_rules
 from django.db import models
-# from NAHR.recSys.models import rules
+from NAHR.recSys.models import rules
 
 
-train_data = pd.read_csv( '/Users/jennansowayan/Nahr/NAHR/train_data.csv', delim_whitespace=True, header=None)
+train_data = pd.read_csv( '/Users/shahadalmugrin/Desktop/venv2/nahrv1/train_data.csv', delim_whitespace=True, header=None)
 data_len= len(train_data)
 
 
