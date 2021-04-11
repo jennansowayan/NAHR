@@ -118,16 +118,23 @@ button.selected{
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link  active" href="dashboard.html">Home</a></li>
+          <li><a class="nav-link  active" href="../">Home</a></li>
           <li><a class="nav-link " href="">Courses</a></li>
 
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 
           {% if user.is_authenticated %}
+<<<<<<< HEAD
+          
+          
+          <span><a href=../logout> Logout</a></span>
+          <span><a href=../profile> Profile &nbsp &nbsp</a></span>
+=======
 
 
           <span><a href=logout> Logout</a></span>
           <span><a href=profile> Profile &nbsp &nbsp</a></span>
+>>>>>>> 78d20b74a04de1331b38fdf98fe00c929fb7334e
           <br><br>
           <span> Hi, {{request.user}} </span>
           {% else %}
