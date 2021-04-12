@@ -20,3 +20,5 @@ class intrest(models.Model):
     )
 
  intrests = MultiSelectField(choices = intrest_choices)
+ 
+
