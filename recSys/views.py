@@ -717,23 +717,15 @@ def generate_rules(request):
     for ind in rule.index:
         ant = rule['antecedents'][ind]
         con = rule['consequents'][ind]
-        rules(antecedents = ant, consequents = con)
+        r = rules(antecedents = ant, consequents = con)
+        r.save()
+
+    
                
 
-    # for item, row in rule.iteritems():
-    #     rules(antecedents = row['antecedents'], consequents = row['consequents'])
     
-    return HttpResponse(rule)
+    return HttpResponse("success")
 
-    # def post(self, request):
-    #     interests = request.POST.get()
-    #     #store intrests
-       
-    # def get(self, request)   
-    #     #compaire intrests with antecedents 
-    #     #get all relevent consequents store in recs
-
-    #     return recs
         
-def recommend(request):
-    intrests = u
+# def recommend(request):
+    
