@@ -27,5 +27,4 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     #path('register', registerPage),
     #path('login', loginPage)
-   )
 ]
