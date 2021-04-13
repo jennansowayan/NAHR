@@ -718,4 +718,9 @@ records = [  # 2
     return HttpResponse("success")
 
 
+<<<<<<< HEAD
+def recommend(request):
+    return HttpResponse("success")
+=======
 #def recommend(request):
+>>>>>>> 4c71ad883234e0cc80e1f2c3b91d6e2188e0e5e4
