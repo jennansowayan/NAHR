@@ -3,7 +3,10 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 
 # Create your views here.
-records = [  # 2
+
+
+def generate_rules():
+    records = [  # 2
     ['prog', 'ai'],
     ['prog', 'ai'],
     ['prog', 'ai'],
@@ -688,8 +691,6 @@ records = [  # 2
     ['da', 'music', 'pm'],
     ['da', 'music', 'mark'],
     ['da', 'music', 'fash']]
-
-
     te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
@@ -713,9 +714,5 @@ records = [  # 2
     return HttpResponse("success")
 
 
-<<<<<<< HEAD
 def recommend(request):
     return HttpResponse("success")
-=======
-#def recommend(request):
->>>>>>> 4c71ad883234e0cc80e1f2c3b91d6e2188e0e5e4
