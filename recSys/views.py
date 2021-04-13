@@ -1,9 +1,5 @@
 from django.shortcuts import render
 from mlxtend.frequent_patterns import apriori, association_rules
-from mlxtend.preprocessing import TransactionEncoder
-import pandas as pd
-from .models import rules
-from django.http import HttpResponse
 
 
 # Create your views here.
@@ -696,10 +692,9 @@ records = [  # 2
 
 def generate_rules(request):
 
-    te = TransactionEncoder()
+    e = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
-
     frequent_itemsets = apriori(df, min_support=0.01, use_colnames=True)
 
     print(frequent_itemsets)
