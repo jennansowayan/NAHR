@@ -17,7 +17,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons --> 
+  <!-- Favicons -->
   <link rel="shortcut icon" href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}">
 
   <link href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" rel="apple-touch-icon">
@@ -31,7 +31,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Vendor CSS Files -->
-  
+
   <link href="{% static 'webpages/assets/vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'webpages/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'webpages/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -70,8 +70,8 @@
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 
           {% if user.is_authenticated %}
-          
-          
+
+
           <span><a href=logout/> Logout</a></span>
           <span><a href=profile/> Profile &nbsp &nbsp</a></span>
           <br><br>
@@ -80,27 +80,13 @@
 
           <li><a class="getstarted scrollto" href="login/">LOGIN</a></li>
           {% endif %}
-         
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
-
-  
-  <!-- ======= search Section ======= -->
-  <section class="align-items-center">
-        
-    <div class="container container-sm">
-      <br>
-      <br>
-      <div class="form-outline">
-        <input class="form-control" id="myInput" type="text" placeholder="try searching 'programming' or 'free'">
-      </div>
-    </div>
-</section><!-- End search -->
-
 
 
 <main id="main">
@@ -113,6 +99,12 @@
   <div class="section-title">
     <p>Courses</p>
   </div>
+<!-- ======= search Section ======= -->
+<div class="form-outline">
+  <input class="form-control" id="myInput" type="text" placeholder="try searching 'programming' or 'free'">
+</div>
+<!-- End search -->
+<br>
 <ul class="list-group" id="myList">
   <div class="row">
   {% block content %}
@@ -132,7 +124,7 @@
     </div>
   </li>
   {% endfor %}
-  
+
   {% endblock %}
 
 
@@ -182,7 +174,7 @@ $(document).ready(function(){
                 <p>+1 5589 55488 55s</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14500.23890551969!2d46.67716345273224!3d24.690473500000017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f033ac58dc4e9%3A0xa680f59328531a25!2z2KjYsdisINin2YTZgdmK2LXZhNmK!5e0!3m2!1sen!2ssa!4v1617662896063!5m2!1sen!2ssa" 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14500.23890551969!2d46.67716345273224!3d24.690473500000017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f033ac58dc4e9%3A0xa680f59328531a25!2z2KjYsdisINin2YTZgdmK2LXZhNmK!5e0!3m2!1sen!2ssa!4v1617662896063!5m2!1sen!2ssa"
 
               frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
@@ -263,7 +255,7 @@ $(document).ready(function(){
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Courses</a></li>
-            
+
             </ul>
           </div>
 
@@ -274,7 +266,7 @@ $(document).ready(function(){
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.Coursera.com">Coursera</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.Udemy.com">Udemy</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.generalassemb.ly">General Assembly</a></li>
-          
+
             </ul>
           </div>
 
