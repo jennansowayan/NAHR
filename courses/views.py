@@ -3,6 +3,8 @@ from .models import Technology
 from .models import Business
 from .models import Science
 from .models import Art
+from courses import models
+from itertools import chain
 # Create your views here.
 
 # TO DO:
@@ -33,6 +35,18 @@ def art(request):
 
 def courses(request):
     return render(request, "courses.html", {})
+
+
+def courses(request):
+    techlist = models.Technology.objects.all()
+    artlist = models.Art.objects.all()
+    businesslist = models.Business.objects.all()
+    sciencelist = models.Science.objects.all()
+    queryset = chain(techlist, artlist, sciencelist, businesslist)
+    context = {
+        "course_list": queryset
+    }
+    return render(request, "courses.html", context)
 
 
 def tech(request):
