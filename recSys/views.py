@@ -6,8 +6,6 @@ from .models import rules
 from django.http import HttpResponse
 
 
-
- 
 # Create your views here.
 records = [# 2
 ['prog', 'ai'],
@@ -697,8 +695,6 @@ records = [# 2
 
 def generate_rules(request):
 
-    
-
     te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
@@ -707,25 +703,20 @@ def generate_rules(request):
 
     print(frequent_itemsets)
 
-
     rule = association_rules(frequent_itemsets, metric="lift", min_threshold=1.5)
 
     rule["antecedents"] = rule["antecedents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
     rule["consequents"] = rule["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
 
-    
+
     for ind in rule.index:
         ant = rule['antecedents'][ind]
         con = rule['consequents'][ind]
         r = rules(antecedents = ant, consequents = con)
         r.save()
 
-    
-               
 
-    
     return HttpResponse("success")
 
-        
-# def recommend(request):
-    
+
+#def recommend(request):
