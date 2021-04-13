@@ -10,6 +10,5 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('profile/', views.profile, name='profile'),
     path('quiz/', views.intrestForm_view, name='quiz'),
-   # path('customer/<str:pk_test>/', views.customer, name="customer"),
 
 ]

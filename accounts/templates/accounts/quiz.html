@@ -22,7 +22,7 @@ h5{color:white;}
 }
 .btn.custom-btn{
   background-color:#ef7f4d;
-	
+
 }
 
 #search {
@@ -73,7 +73,7 @@ button.selected{
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-  <!-- Favicons --> 
+  <!-- Favicons -->
   <link rel="shortcut icon" href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}">
 
   <link href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" rel="apple-touch-icon">
@@ -84,7 +84,7 @@ button.selected{
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- Vendor CSS Files -->
-  
+
   <link href="{% static 'webpages/assets/vendor/aos/aos.css' %}" rel="stylesheet">
   <link href="{% static 'webpages/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'webpages/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
@@ -118,62 +118,65 @@ button.selected{
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link  active" href="dashboard.html">Home</a></li>
+          <li><a class="nav-link  active" href="../">Home</a></li>
           <li><a class="nav-link " href="">Courses</a></li>
-          
+
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
 
           {% if user.is_authenticated %}
-          
-          
-          <span><a href=logout/> Logout</a></span>
-          <span><a href=profile/> Profile &nbsp &nbsp</a></span>
+
+  <!-- ======= HEAD ======= -->
+          <span><a href=../logout> Logout</a></span>
+          <span><a href=../profile> Profile &nbsp &nbsp</a></span>
+
           <br><br>
           <span> Hi, {{request.user}} </span>
           {% else %}
 
           <li><a class="getstarted scrollto" href="templates/login.html">LOGIN</a></li>
           {% endif %}
-         
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
     </div>
   </header><!-- End Header -->
+
 <!-- QUIZ BODY START-->
-<br>
-<br>
-<section class="align-items-center">
-  <div class="container-fluid">
-    <div class="row">
-
-      <div class="col-4">
-        <img src="{% static 'webpages/assets/img/about-img.svg' %}" class="img-fluid animated" alt="">
+<section id="hero" class="d-flex align-items-center">
+  <div class="container">
+    <div class="row gy-4">
+        <div class="col-lg-6 order-1 order-lg-2">
+          <br><br>
+          <h1>Click on the fields you're interested in.</h1>
+          <h2>This will help us recommend<br> courses to you more accurately.</h2>
         </div>
-                         
-      
-<h3 class=" top-left"><br><br><br>Click on the feilds you're<br> interested in.</h3>
-        <h4 class="top-left"><br><br><br><br><br><br>This will help us recommend<br> courses to you more accurately.</h4>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img">
+          <img src="{% static 'webpages/assets/img/about-img.svg' %}" class="img-fluid animated" alt="">
+        </div>
+    </div>
+  </div>
+</section>
 
+<br><br><br>
+<div class="container">
+  <div class= "align-center">
+    <form method="POST" action="">
+    {% csrf_token %}
 
-<form>
-  <form method="POST" action="">
-{% csrf_token %}
+    {{ form.as_p }}
 
-{{ form.as_p }}
+    <input type="submit" value="Save" >
 
-<input type="submit" value="Save" >
+    <a href="/courses" class="ml-2">Submit</a>
 
-<a href="/courses" class="ml-2">Submit</a>
-
-
-
-
-
-</form>
+    </form>
+  </div>
+</div>
 
 <!-- QUIZ BODY END-->
+
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
@@ -212,7 +215,7 @@ button.selected{
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Courses</a></li>
-            
+
             </ul>
           </div>
 
@@ -223,7 +226,7 @@ button.selected{
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.Coursera.com">Coursera</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.Udemy.com">Udemy</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="https://www.generalassemb.ly">General Assembly</a></li>
-          
+
             </ul>
           </div>
 
