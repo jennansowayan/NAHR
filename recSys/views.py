@@ -690,22 +690,18 @@ records = [  # 2
     ['da', 'music', 'fash']]
 
 
-def generate_rules(request):
-
-    e = TransactionEncoder()
+    te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
     frequent_itemsets = apriori(df, min_support=0.01, use_colnames=True)
 
     print(frequent_itemsets)
 
-    rule = association_rules(
-        frequent_itemsets, metric="lift", min_threshold=1.5)
+    rule = association_rules(frequent_itemsets, metric="lift", min_threshold=1.5)
 
-    rule["antecedents"] = rule["antecedents"].apply(
-        lambda x: ', '.join(list(x))).astype("unicode")
-    rule["consequents"] = rule["consequents"].apply(
-        lambda x: ', '.join(list(x))).astype("unicode")
+    rule["antecedents"] = rule["antecedents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
+    rule["consequents"] = rule["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
+
 
     for ind in rule.index:
         ant = rule['antecedents'][ind]
@@ -713,8 +709,13 @@ def generate_rules(request):
         r = rules(antecedents=ant, consequents=con)
         r.save()
 
+
     return HttpResponse("success")
 
 
+<<<<<<< HEAD
 def recommend(request):
     return HttpResponse("success")
+=======
+#def recommend(request):
+>>>>>>> 4c71ad883234e0cc80e1f2c3b91d6e2188e0e5e4
