@@ -716,4 +716,5 @@ def generate_rules(request):
     return HttpResponse("success")
 
 
-# def recommend(request):
+def recommend(request):
+    return HttpResponse("success")
