@@ -727,6 +727,7 @@ def recommend(request):
     l = []
     for rule in r:
         if rule.antecedents == i:
-            l = 
+            l=antecedents;s
+            
         
-    return HttpResponse(i + " ")
+    return HttpResponse(i)
