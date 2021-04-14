@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+
 class Technology(models.Model):
 	CATEGORY = (('programming', 'programming'),
 	('security', 'security'), ('UX', 'UX'))

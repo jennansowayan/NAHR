@@ -4,6 +4,7 @@ from mlxtend.preprocessing import TransactionEncoder
 import pandas as pd
 from .models import rules
 from django.http import HttpResponse
+from accounts.models import intrest
 
 # Create your views here.
 
@@ -719,4 +720,13 @@ def generate_rules():
 
 
 def recommend(request):
-    return HttpResponse("success")
+    i = intrest.objects.all()[0].intrests
+
+    r = rules.objects.all()
+
+    l = []
+    for rule in r:
+        if rule.antecedents == i:
+            l = 
+        
+    return HttpResponse(i + " ")
