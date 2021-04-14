@@ -1,6 +1,6 @@
 from django.shortcuts import render
-#from mlxtend.frequent_patterns import apriori, association_rules
-#from mlxtend.preprocessing import TransactionEncoder
+from mlxtend.frequent_patterns import apriori, association_rules
+from mlxtend.preprocessing import TransactionEncoder
 import pandas as pd
 from .models import rules
 from django.http import HttpResponse
