@@ -5,12 +5,10 @@ from django.db import models
 
 class Technology(models.Model):
 
-	CATEGORY = (('prog', 'prog'),
-	('cyber', 'cyber'), ('ai', 'ai'))
+	CATEGORY = (('prog', 'Programming'),
+	('cyber', 'Cybersecurity'), ('ai', 'Artificial intelligence'))
 
-	CATEGORY = (('prog', 'programming'),
-	('c', 'security'), ('UX', 'UX'))
-
+	
 	name = models.TextField(null=True,blank=True)
 	sub_category = models.TextField(null=True,blank=True, choices=CATEGORY)
 	description= models.TextField(null=True,blank=True)
@@ -19,8 +17,8 @@ class Technology(models.Model):
 
 
 class Business(models.Model):
-	CATEGORY = (('pm', 'pm'),
-	('mark', 'mark'), ('acc', 'acc'))
+	CATEGORY = (('pm', 'Project Managment'),
+	('mark', 'Marketing'), ('acc', 'Accounting'))
 
 	name = models.TextField(null=True,blank=True)
 	sub_category = models.TextField(null=True,blank=True, choices=CATEGORY)
@@ -29,8 +27,8 @@ class Business(models.Model):
 	link = models.URLField(max_length=200)
 
 class Science(models.Model):
-	CATEGORY = (('bio', 'bio'),
-	('phy', 'phy'), ('chem', 'chem'),('math', 'math'))
+	CATEGORY = (('bio', 'Biology'),
+	('phy', 'Physics'), ('chem', 'Chemistry'),('math', 'Math'))
 
 	name = models.TextField(null=True,blank=True)
 	sub_category = models.TextField(null=True,blank=True, choices=CATEGORY)
@@ -39,8 +37,8 @@ class Science(models.Model):
 	link = models.URLField(max_length=200)
 
 class Art(models.Model):
-	CATEGORY = (('fash', 'fash'),
-	('music', 'music'), ('da', 'da'))
+	CATEGORY = (('fash', 'Fashion'),
+	('music', 'Music'), ('da', 'Digital Art'))
 
 	name = models.TextField(null=True,blank=True)
 	sub_category = models.TextField(null=True,blank=True, choices=CATEGORY)
