@@ -738,7 +738,6 @@ def recommend(request):
                 print(rule.antecedents)
                 l.extend(rule.consequents) 
 
-    print(l)
 
 
     return HttpResponse(l)
