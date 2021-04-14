@@ -5,6 +5,7 @@ import pandas as pd
 from .models import rules
 from django.http import HttpResponse
 from accounts.models import intrest
+from courses import views, models
 
 # Create your views here.
 
@@ -719,3 +720,17 @@ def generate_rules():
 
 
 def recommend(request):
+    i = intrest.objects.all()[0].intrest
+    l.extend(i)
+
+    for item in i:
+        for rule in r:
+            print(rule.antecedents)
+
+            if item == rule.antecedents:
+                print(rule.antecedents)
+                l.extend(rule.consequents)
+
+    print(l)
+
+    return HttpResponse(l)
