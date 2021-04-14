@@ -716,19 +716,12 @@ def generate_rules():
         r = rules(antecedents=ant, consequents=con)
         r.save()
 
-
     return HttpResponse("success")
 
 
 def recommend(request):
-    i = intrest.objects.all()[0].intrests
-
-    r = rules.objects.all()
-
-    l = []
+    i = intrest.objects.all()[0].intrest
     l.extend(i)
-
-    
 
     for item in i:
         for rule in r:
@@ -736,8 +729,7 @@ def recommend(request):
 
             if item == rule.antecedents:
                 print(rule.antecedents)
-                l.extend(rule.consequents) 
-
+                l.extend(rule.consequents)
 
 
     return HttpResponse(l)
