@@ -7,9 +7,7 @@ from django.http import HttpResponse
 from accounts.models import intrest
 from courses import views, models
 
-
 # Create your views here.
-
 
 def generate_rules():
     records = [  # 2
@@ -697,6 +695,7 @@ def generate_rules():
     ['da', 'music', 'pm'],
     ['da', 'music', 'mark'],
     ['da', 'music', 'fash']]
+
     te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
