@@ -5,9 +5,7 @@ import pandas as pd
 from .models import rules
 from django.http import HttpResponse
 
-
 # Create your views here.
-
 
 def generate_rules():
     records = [  # 2
@@ -695,6 +693,7 @@ def generate_rules():
     ['da', 'music', 'pm'],
     ['da', 'music', 'mark'],
     ['da', 'music', 'fash']]
+
     te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
