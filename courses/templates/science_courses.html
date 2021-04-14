@@ -1,1 +1,317 @@
-<h1>Science</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <style>
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+</style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NAHR</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}">
+
+  <link href="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+
+<!--SCRIPTS FOR SEARCH-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Vendor CSS Files -->
+
+  <link href="{% static 'webpages/assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'webpages/assets/css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'webpages/assets/css/style1.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars - v4.1.0
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <h1 class="text-light"><a href=""><img src="{% static 'webpages/assets/img/nahrstuff/NAHRDESIGNCARD.png' %}" alt="" class="img-fluid"></a>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="">Courses</a></li>
+          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+          {% if user.is_authenticated %}
+
+
+          <span><a href=logout/> Logout</a></span>
+          <span><a href=profile/> Profile &nbsp &nbsp</a></span>
+          <br><br>
+          <span> Hi, {{request.user}} </span>
+          {% else %}
+
+          <li><a class="getstarted scrollto" href="login/">LOGIN</a></li>
+          {% endif %}
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+
+<main id="main">
+
+
+<!-- ======= courses Section ======= -->
+<section id="courses" class="services section-bg">
+<div class="container" data-aos="fade-up">
+
+  <div class="section-title">
+    <p>Science Courses</p>
+  </div>
+  <!-- ======= search Section ======= -->
+  <div class="form-outline">
+    <input class="form-control" id="myInput" type="text" placeholder="try searching 'chemistry' or 'free'">
+  </div>
+  <br>
+  <!-- End search -->
+<ul class="list-group" id="myList">
+  <div class="row">
+  {% block content %}
+
+  {% for instance in science_list %}
+  <li class="list-group-item">
+    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+      <div class="icon-box">
+        <div class="icon"><i class="bx bx-code-block"></i></div>
+        <h4 class="title"><pre><a href="{{ instance.link }}">{{ instance.name }}</pre></a></h4>
+        <p class="description">
+        <i class="bx bx-chevron-right"></i>{{ instance.description}}<br>
+        <i class="bx bx-chevron-right"></i>{{ instance.fees }}</a><br>
+      </p>
+      </div>
+    </div>
+  </li>
+  {% endfor %}
+
+  {% endblock %}
+
+
+  </div>
+</div>
+</ul>
+
+</section><!-- End Services Section -->
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Contact Us</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 olaya, Riyadh, KSA 535022</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@nahr.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14500.23890551969!2d46.67716345273224!3d24.690473500000017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f033ac58dc4e9%3A0xa680f59328531a25!2z2KjYsdisINin2YTZgdmK2LXZhNmK!5e0!3m2!1sen!2ssa!4v1617662896063!5m2!1sen!2ssa"
+
+              frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group col-md-6 mt-3 mt-md-0">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Be the first to know about our latest online courses</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>NAHR</h3>
+            <p>
+              A108 Olaya Street <br>
+              Riyadh, KSA 535022<br>
+              Saudi Arabia <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@nahr.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Courses</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Providers</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.skillshare.com">Skillshare</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Coursera.com">Coursera</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.Udemy.com">Udemy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.generalassemb.ly">General Assembly</a></li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>FOLLOW US</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>NAHR</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'webpages/assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'webpages/assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'webpages/assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

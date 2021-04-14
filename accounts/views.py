@@ -70,3 +70,5 @@ def intrestForm_view(request):
 @login_required
 def profile(request):
   return render(request, 'accounts/profile.html',{})
+
+  

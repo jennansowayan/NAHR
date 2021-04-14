@@ -3,16 +3,13 @@ from django.shortcuts import render
 #from mlxtend.preprocessing import TransactionEncoder
 import pandas as pd
 from .models import rules
-
-
-
+from django.http import HttpResponse
+from accounts.models import intrest
 
 # Create your views here.
 
-
-def recommend(request):
-
-    records = [# 2
+def generate_rules():
+    records = [  # 2
     ['prog', 'ai'],
     ['prog', 'ai'],
     ['prog', 'ai'],
@@ -563,7 +560,7 @@ def recommend(request):
     ['pm', 'prog', 'ai'],
     ['pm', 'prog', 'cyber'],
     ['pm', 'prog', 'da'],
-    #end pm prog
+    # end pm prog
     ['pm', 'ai', 'prog'],
     ['pm', 'ai', 'cyber'],
     ['pm', 'ai', 'da'],
@@ -621,7 +618,7 @@ def recommend(request):
     ['fash', 'pm', 'mark'],
     ['fash', 'pm', 'music'],
     ['fash', 'pm', 'da'],
-    #end fash pm
+    # end fash pm
     ['fash', 'mark', 'pm'],
     ['fash', 'mark', 'music'],
     ['fash', 'mark', 'da'],
@@ -696,40 +693,40 @@ def recommend(request):
     # end da fash
     ['da', 'music', 'pm'],
     ['da', 'music', 'mark'],
-    ['da', 'music', 'fash'],
-    # end da music
-    # end da 3
-
-    #prog ai cyber
-    #chem phy bio math
-    #pm acc mark
-    #fash music da
-    ]
+    ['da', 'music', 'fash']]
 
     te = TransactionEncoder()
     te_ary = te.fit(records).transform(records)
     df = pd.DataFrame(te_ary, columns=te.columns_)
+
     frequent_itemsets = apriori(df, min_support=0.01, use_colnames=True)
 
     print(frequent_itemsets)
 
-
     rule = association_rules(frequent_itemsets, metric="lift", min_threshold=1.5)
 
-    
-
-    for item, row in rule.iterrows():
-        rules(antecedents = row['antecedents'], consequents = row['consequents'])
+    rule["antecedents"] = rule["antecedents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
+    rule["consequents"] = rule["consequents"].apply(lambda x: ', '.join(list(x))).astype("unicode")
 
 
-    # def post(self, request):
-    #     interests = request.POST.get()
-    #     #store intrests
-       
-    # def get(self, request)   
-    #     #compaire intrests with antecedents 
-    #     #get all relevent consequents store in recs
+    for ind in rule.index:
+        ant = rule['antecedents'][ind]
+        con = rule['consequents'][ind]
+        r = rules(antecedents=ant, consequents=con)
+        r.save()
 
-    #     return recs
+
+    return HttpResponse("success")
+
+
+def recommend(request):
+    i = intrest.objects.all()[0].intrests
+
+    r = rules.objects.all()
+
+    l = []
+    for rule in r:
+        if rule.antecedents == i:
+            l = 
         
-
+    return HttpResponse(i + " ")
