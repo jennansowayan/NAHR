@@ -715,18 +715,7 @@ def generate_rules():
         r = rules(antecedents=ant, consequents=con)
         r.save()
 
-
     return HttpResponse("success")
 
 
 def recommend(request):
-    i = intrest.objects.all()[0].intrests
-
-    r = rules.objects.all()
-
-    l = []
-    for rule in r:
-        if rule.antecedents == i:
-            l = 
-        
-    return HttpResponse(i + " ")
