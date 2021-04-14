@@ -65,6 +65,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
+          <li><a class="nav-link scrollto active" href="../">Home</a></li>
           <li><a class="nav-link scrollto active" href="">Courses</a></li>
           <li><a class="nav-link scrollto" href="#about">About Us</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -102,120 +103,29 @@
   <div class="form-outline">
     <input class="form-control" id="myInput" type="text" placeholder="try searching 'programming' or 'free'">
   </div>
-  <!-- End search -->
   <br>
+  <!-- End search -->
 <ul class="list-group" id="myList">
   <div class="row">
-    <li class="list-group-item">
+    {% block content %}
+
+  {% for instance in course_list %}
+  <li class="list-group-item">
     <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
       <div class="icon-box">
         <div class="icon"><i class="bx bx-code-block"></i></div>
-        <h4 class="title"><pre><a href="https://www.coursera.org/learn/web-development">Intro to Web-Development</pre></a></h4>
+        <h4 class="title"><pre><a href="{{ instance.link }}">{{ instance.name }}</pre></a></h4>
         <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Coursera. "This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have.... This course is designed to start you on a path toward future studies in web development and design, no matter how little experience or technical knowledge you currently have."<br>
+        <i class="bx bx-chevron-right"></i>{{ instance.description}}<br>
+        <i class="bx bx-chevron-right"></i>{{ instance.fees }}</a><br>
         <i class="bx bx-chevron-right"></i>Free enrollment, Web-Development, Programming, Computer Science</a>
       </p>
       </div>
     </div>
   </li>
+  {% endfor %}
 
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class="bx bx-bar-chart-alt-2"></i></div>
-        <h4 class="title"><pre><a href="https://www.udemy.com/course/pmp-pmbok6-35-pdus/">PMP Exam Prep Seminar</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Udemy. "Pass the PMP on Your First Attempt!" This course aims to help individuals qualified for the PMP exam to prepare for it.<br>
-        <i class="bx bx-chevron-right"></i>$179.99<br>
-        <i class="bx bx-chevron-right"></i>Paid, Project Management, PMP, Business</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bx-palette'></i></div>
-        <h4 class="title"><pre><a href="https://www.udemy.com/course/pattern-making-for-fashion-design-beginner-course/">Pattern Making for Fashion Design - Beginner Course (Part 1)</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Udemy. "How to use Pattern Making Principals and Techniques to draft patterns for your original fashion design ideas."<br>
-        <i class="bx bx-chevron-right"></i>$27.99<br>
-        <i class="bx bx-chevron-right"></i>Paid, Art, Design, Fashion Design</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bxs-flask'></i></div>
-        <h4 class="title"><pre><a href="https://www.skillshare.com/classes/Moles-and-Molarity/1309610607?via=browse-rating-chemistry-layout-grid">Moles & Molarity</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Skillshare. "This course will look at moles and molarity, and Avogadro's constant, and then later move on to look at Amounts, Volumes and Concentrations, and it contains a number of worked examples of how to calculate the number of moles present, how many grams of something you will need to get a certain number of moles, and how to work out the molarity of a solution."<br>
-        <i class="bx bx-chevron-right"></i>Free, Classes, Chemistry, Science, Middle school, High school</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bxs-flask'></i></div>
-        <h4 class="title"><pre><a href="https://www.coursera.org/learn/einstein-relativity">Understanding Einstein: The Special Theory of Relativity</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Coursera. "In this course we will seek to “understand Einstein,” especially focusing on the special theory of relativity that Albert Einstein, as a twenty-six year old patent clerk, introduced in his “miracle year” of 1905. Our goal will be to go behind the myth-making and beyond the popularized presentations of relativity in order to gain a deeper understanding of both Einstein the person and the concepts, predictions, and strange paradoxes of his theory"<br>
-        <i class="bx bx-chevron-right"></i>Free-enrollment, Physics, Science, Space</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bx-bar-chart-alt-2'></i></div>
-        <h4 class="title"><pre><a href="https://www.coursera.org/learn/marketing-plan">Digital Media and Marketing Strategies</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Coursera. "This course aims to give you a deeper understanding of core processes of planning a digital marketing campaign and the role of various digital channels in an integrated marketing communication."<br>
-        <i class="bx bx-chevron-right"></i>Free-enrollment, Marketing, Business, Online</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bx-palette'></i></div>
-        <h4 class="title"><pre><a href="https://www.udemy.com/course/pattern-making-for-fashion-design-beginner-course/">Pattern Making for Fashion Design - Beginner Course (Part 1)</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by Udemy. "How to use Pattern Making Principals and Techniques to draft patterns for your original fashion design ideas."<br>
-        <i class="bx bx-chevron-right"></i>$27.99<br>
-        <i class="bx bx-chevron-right"></i>Paid, Art, Design, Fashion Design</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-  <li class="list-group-item">
-    <div class="d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-      <div class="icon-box">
-        <div class="icon"><i class='bx bx-bar-chart-alt-2'></i></div>
-        <h4 class="title"><pre><a href="https://www.actksa.com/training-courses/management/costing-finance-and-accounting/accounting-fundamentals-the-income-statement-working-capital">Accounting Fundamentals, The Income Statement & Working Capital</pre></a></h4>
-        <p class="description">
-        <i class="bx bx-chevron-right"></i>Provided by ACTKsa. "The Accounting Fundamentals course aims to provide participants (particularly those who have no prior knowledge of finance) with an introduction to financial statement analysis. The income statement, balance sheet and cash flow statement are introduced, and the key interactions between the income statement and balance sheet are explained. Participants will build simple financial statements using a list of transactions."<br>
-        <i class="bx bx-chevron-right"></i>7,475 SAR</a> <br>
-        <i class="bx bx-location-plus"></i>Starts on 25/05/2021 in Khobar, KSA</a><br>
-        <i class="bx bx-chevron-right"></i>Paid, Accounting, Finance, In-Person, Business</a>
-      </p>
-      </div>
-    </div>
-  </li>
-
-
+  {% endblock %}
   </div>
 </div>
 </ul>
