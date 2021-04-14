@@ -730,6 +730,15 @@ def recommend(request):
             if item == rule.antecedents:
                 print(rule.antecedents)
                 l.extend(rule.consequents)
+    
+    techlist = models.Technology.objects.all().filter(sub_category = l)
+    artlist = models.Art.objects.all().filter(sub_category = l)
+    businesslist = models.Business.objects.all().filter(sub_category = l)
+    sciencelist = models.Science.objects.all().filter(sub_category = l)
+    queryset = chain(techlist, artlist, sciencelist, businesslist)
+    context = {
+        "course_list": queryset
+    }
 
 
-    return HttpResponse(l)
+    return render(request, "courses.html", context)

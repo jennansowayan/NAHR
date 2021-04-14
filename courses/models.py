@@ -4,8 +4,12 @@ from django.db import models
 
 
 class Technology(models.Model):
+
 	CATEGORY = (('prog', 'prog'),
 	('cyber', 'cyber'), ('ai', 'ai'))
+
+	CATEGORY = (('prog', 'programming'),
+	('c', 'security'), ('UX', 'UX'))
 
 	name = models.TextField(null=True,blank=True)
 	sub_category = models.TextField(null=True,blank=True, choices=CATEGORY)
