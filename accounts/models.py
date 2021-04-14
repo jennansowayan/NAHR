@@ -3,19 +3,19 @@ from multiselectfield import MultiSelectField
 # Create your models here.
 class intrest(models.Model):
  intrest_choices = (
-    ('Cybersecurity', 'Cybersecurity'),
-    ('Programming', 'Programming'),
-    ('Artificial Intelligence', 'Artificial Intelligence'),
-    ('Math', 'Math'),
-    ('Chemistry', 'Chemistry'),
-    ('Physics', 'Physics'),
-    ('Biology', 'Biology'),
-    ('Project Managment', 'Project Managment'),
-    ('Accounting', 'Accounting'),
-    ('Marketing', 'Marketing'),
-    ('Music', 'Music'),
-    ('Digital Art', 'Digital Art'),
-    ('Fashion', 'Fashion'),
+    ('cyber', 'Cybersecurity'),
+    ('prog', 'Programming'),
+    ('ai', 'Artificial Intelligence'),
+    ('math', 'Math'),
+    ('chem', 'Chemistry'),
+    ('phy', 'Physics'),
+    ('bio', 'Biology'),
+    ('pm', 'Project Managment'),
+    ('acc', 'Accounting'),
+    ('mark', 'Marketing'),
+    ('music', 'Music'),
+    ('da', 'Digital Art'),
+    ('fash', 'Fashion'),
     
     )
 
