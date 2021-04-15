@@ -63,7 +63,7 @@ def intrestForm_view(request):
   if form.is_valid():
       form.save()
 
-      return redirect('courses')
+      return redirect('/rec')
   context = { 'form': form}
   return render(request,'accounts/quiz.html',context)
    

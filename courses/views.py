@@ -4,6 +4,7 @@ from .models import Business
 from .models import Science
 from .models import Art
 from courses import models
+from accounts.models import intrest
 from itertools import chain
 # Create your views here.
 
@@ -42,6 +43,7 @@ def courses(request):
     artlist = models.Art.objects.all()
     businesslist = models.Business.objects.all()
     sciencelist = models.Science.objects.all()
+    interestslist = intrest.objects.last()
     queryset = chain(techlist, artlist, sciencelist, businesslist)
     context = {
         "course_list": queryset
